@@ -1,0 +1,14 @@
+# Ignore the real environment variable file
+.env
+
+# Ignore the real role configuration file
+role_config.py
+
+# Ignore log files
+*.log
+
+# Ignore __pycache__ directories
+__pycache__/
+
+# Ignore any other files generated during runtime
+*.pyc

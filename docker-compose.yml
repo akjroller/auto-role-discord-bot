@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  discord_bot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: always
+    healthcheck:
+      test: ["CMD", "python", "health_check.py"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
